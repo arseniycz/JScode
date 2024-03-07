@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            max-width: 150px;
+            margin-bottom: 1em;;
+        }
+    </style>
+</head>
+<body>
+    <input id="input" type="text" placeholder="Add new item">
+    <button id="button">Add</button>
+    <br>
+    <br>
+
+    <script>
+        let input = document.getElementById('input');
+        let newButton = document.getElementById('button');
+
+        function addFromElement() {
+            if (input.value === '') { return; }
+            addNewItem(input.value);
+            input.value = '';
+        }
+
+        newButton.onclick = addFromElement;
+        input.onchange = addFromElement;
+
+        let data = [
+            'https://picsum.photos/seed/a/200/300',
+            'https://picsum.photos/seed/b/200/300',
+            'https://picsum.photos/seed/c/200/300',
+            'https://picsum.photos/seed/d/200/300',
+            'https://picsum.photos/seed/e/200/300',
+        ];
+
+        function addNewItem(imageSrc) {
+            let element = document.createElement('div');
+            let img = document.createElement('img');
+            let button = document.createElement('button');
+
+            document.body.appendChild(element);
+            element.appendChild(img);
+            element.appendChild(button);
+
+            img.src = imageSrc;
+            button.textContent = 'Remove';
+
+            button.onclick = function() {
+                element.remove();
+            }
+        }
+
+        for (let index=0; index<data.length; index++) {
+            addNewItem(data[index]);
+        }
+
+    </script>
+    
+</body>
+</html>
