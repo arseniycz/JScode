@@ -1,0 +1,43 @@
+* {
+    background-color: rgb(52, 45, 45);
+    
+}
+
+.upText .title, .upText strong  {
+    color: rgb(21, 182, 13);
+}
+
+.fotoColor > div {
+    height: 100px;
+    width: 200px;
+    margin: 40px;
+    border-radius: 10px;
+    color: antiquewhite;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.red {
+    background-color: brown;
+    border: 5px solid rgb(217, 228, 60);
+
+}
+
+.green {
+    background-color: rgb(16, 121, 55);
+    border: 5px solid rgb(210, 27, 192);
+
+}
+
+.blue {
+    background-color: rgb(42, 27, 142);
+    border: 5px solid rgb(201, 36, 36);
+
+}
+
+
+.end {
+    height: 500px;
+    width: auto;
+    background-color: rgb(54, 54, 77);
+}
