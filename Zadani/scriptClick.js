@@ -26,6 +26,6 @@ function changeColor(element) {
         element.style.backgroundColor = 'black';
         clickCount = 0;
         element.setAttribute("clickCount", clickCount);
-        element.style.transform = 'rotateY(360deg)'; // Поворачиваем карточку на 180 градусов
+        element.style.transform = 'rotateY(360deg)'; 
     }
 }
