@@ -1,0 +1,18 @@
+Vytvořte HTML stránku 08_cube.HTML a v ní script, který má 3 funkce:
+
+1. funkce createCube pro vytvoření "kostky" anglicky cube + vykresleni
+2. funkce colorCube do které vstupuje tato kostka a barva, kterou se má obarvit
+3. funkce addBorderRadius, která přidá zaoblení rohů
+
+příklad volání:
+
+let myCube = createCube(100); // vytvoří čtverec o straně 100x100px a vykreslí do document.body
+colorCube(myCube, 'red'); // nastaví tento vykreslený čtverec na červenou
+addBorderRadius(myCube, 10); // nastaví zaoblení rohů 10px
+
+
+hlavičky funkcí budou vypadat následovně (na vás je dodělat vnitřek)
+
+function createCube(size) {}
+function colorCube(cube, color) {}
+function addBorderRadius(cube, radius) {}
