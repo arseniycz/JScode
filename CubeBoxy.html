@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+    <link rel="stylesheet" href="styleCubeBox.css">
+	<link rel="stylesheet" href="buttonStyle.css">
+	 
+</head>
+<body>
+
+    <section class="layers">
+		<div class="layers__container">
+            
+			<div class="layers__item layer-1" style="background-image: url(back1.jpg);"></div>
+            
+			<div class="layers__item layer-2" style="background-image: url(backBlue.png);">
+                <div class="hero-content">
+					<h3>Make</h3>
+					
+				</div>
+            
+            </div>
+
+			<div class="layers__item layer-3 BoxInside clickCount" style="background-image: url(img/NEW/11Cube.png);">
+				<img src="Cube.png" alt="">
+				<div class="hero-content">
+					<div style="position:absolute; top:15px; left:5px">
+						<p class=t>3D Cube</p>
+						</div>
+						
+						
+						<div style="position:absolute; top:10px; left:0px">
+						<p class=p>3D Cube</p>
+						</div>
+						
+						
+						<div style="position:absolute; top:12px; left:2px">
+						<p>3D Cube</p>
+						</div>
+					
+					
+				</div>
+
+			</div>
+			<div class="layers__item layer-4" style="background-image: url(backOrangeSmall.png);">
+			
+            	
+
+
+				</div>
+            
+            </div>
+			<div class="layers__item layer-5" style="background-image: url(backOrange.png);">
+				<div class="hero-content">
+				<h1>3D Cube</h1>
+				<div class="hero-content__p">Muzes vytvorit 3D Cube ‘za okamzik’</div>
+				</div>
+					
+            </div>
+			<div class="layers__item layer-6" style="background-image: url(backBlueSmall.png);">
+				
+				<div class="wrap">
+					<button class="button" onclick="makeCube(this)">START</button>
+
+					<div class="colorMix">
+						<div class="colorLeft">
+							<img onclick="colorLeftCube(this)" src="ButtonLeft.png" alt="">
+						</div>
+						<div class="colorRight">
+							<img onclick="colorRightCube(this)"  src="ButtonRight.png" alt="">
+						</div>
+					</div>
+					
+				
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+<script src="cubeScript.js">     </script>
+</body>
+</html>

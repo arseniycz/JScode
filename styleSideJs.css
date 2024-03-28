@@ -1,0 +1,45 @@
+/* body {
+    background-image: url(0img/BaseCube.png);
+    background-size: 800px;
+    background-repeat: no-repeat;
+} */
+
+.cube {
+    height: 80vh;
+	min-height: auto;
+    background-color: #ccc;
+    display: inline-block; 
+    
+    
+    
+}
+
+
+.left {
+    background-image: url(img/SiderLeftpng.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(234, 8, 8, 0.6);
+    
+    background-blend-mode: luminosity;
+    
+    transform: skewX(2deg) skewY(29deg);
+    margin-top: calc(var(--index) * 5.5);
+    margin-left: 0;
+    position: absolute;
+
+}
+
+.right {
+    background-image: url(img/SidrRight.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(17, 136, 17, 0.6);
+    
+    background-blend-mode: overlay;
+    margin-left: 175px;
+    transform: skewX(5deg) skewY(-28deg) rotate(3deg) scale(0.6);
+    position: absolute;
+    
+    
+}

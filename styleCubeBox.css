@@ -1,0 +1,219 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw + 1.7vh);
+	--transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+@font-face {
+	font-family: kamerik-3d;
+	src: url(fonts/kamerik205-heavy.woff2);
+	font-weight: 900;
+}
+@font-face {
+	font-family: merriweather-italic-3d;
+	src: url(fonts/merriweather-regular-italic.woff2);
+}
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: kamerik-3d;
+}
+
+.layers {
+	perspective: 1000px;
+	overflow: hidden;
+}
+.layers__container {
+	height: 100vh;
+	min-height: 800px;
+	transform-style: preserve-3d;
+	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+	will-change: transform;
+	transition: transform var(--transition);
+}
+.layers__item {
+	position: absolute;
+	inset: -5vw;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.layer-1 {
+	transform: translateZ(-55px) scale(1.06);
+}
+.layer-2 {
+	transform: translateZ(80px) scale(.85);
+}
+.layer-3 {
+	transform: translateZ(180px) scale(.66);
+	background-size: 0%;
+	
+	background-repeat: no-repeat;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.layer-3 img {
+	
+	position: relative;
+	margin-top: calc(var(--index) * 5.5);
+	height: 0;
+	margin-left: calc(var(--index) * 22);
+	transition: height 2.5s ease-in-out;
+}
+
+.cube {
+    height: 80vh;
+	min-height: auto;
+    background-color: #ccc;
+    display: inline-block; 
+    
+    
+    
+}
+
+
+.left {
+    background-image: url(img/SiderLeftpng.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(234, 8, 8, 0.6);
+    display: none;
+    background-blend-mode: luminosity;
+    opacity: 90%;
+    transform: skewX(2deg) skewY(33deg) rotate(1.8deg) scale(0.74);
+    margin-top: calc(var(--index) * 7.5);
+    margin-left: calc(var(--index) * -9);
+    position: absolute;
+
+}
+
+.right {
+    background-image: url(img/SidrRight.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(17, 136, 17, 0.6);
+    opacity: 90%;
+    background-blend-mode: overlay;
+	margin-top: calc(var(--index) * 7);
+    margin-left: calc(var(--index) *9);
+    transform: skewX(6deg) skewY(-33deg) rotate(6.8deg) scale(0.74);
+    position: absolute;
+	display: none;
+    
+    
+}
+
+
+
+
+
+	
+
+.layer-4 {
+	transform: translateZ(190px) scale(.9);
+}
+.layer-5 {
+	transform: translateZ(300px) scale(.69);
+}
+.layer-6 {
+	transform: translateZ(380px) scale(.69);
+}
+.hero-content {
+	font-size: calc(var(--index) * 1.9);
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: calc(var(--index) * -.15);
+	line-height: 1.35em;
+	margin-top: calc(var(--index) * -20.5);
+    margin-left: calc(var(--index) * 21.5);
+    color: rgb(11, 155, 155);
+}
+.hero-content span {
+	display: block;
+    margin-left: calc(var(--index) * -9.5);
+    margin-top: calc(var(--index) * 15.5);
+}
+
+p {font-family: sans-serif; font-size:calc(var(--index) * 2.2);color:Darkorange; font-weight:800 }
+p.p {color:Yellow}
+p.t {color:Gray}
+
+h3 {
+    margin-left: calc(var(--index) * -.5);
+    margin-top: calc(var(--index) * -3.5);
+}
+
+h1 {
+    margin-left: calc(var(--index) * -.5);
+    margin-top: calc(var(--index) * 7.5);
+}
+
+
+.hero-content__p {
+	text-transform: none;
+	font-family: merriweather-italic-3d;
+	letter-spacing: normal;
+	font-size: calc(var(--index) * .73);
+	line-height: 3;
+	
+}
+.button-start {
+	font-family: kamerik-3d;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: calc(var(--index) * .71);
+	letter-spacing: -.02vw;
+	padding: calc(var(--index) * .7) calc(var(--index) * 1.25);
+	background-color: transparent;
+	color: #32ace0;
+	border-radius: 50em;
+	border: rgb(255 255 255 / .4) 3px solid;
+	outline: none;
+	cursor: pointer;
+	margin-top: calc(var(--index) * 7.5);
+	
+}
+
+.button-start:hover {
+	background-color: aqua;
+}
+
+.layer-2, .layer-3, .layer-4 {
+	pointer-events: none;
+}
+
+
+.colorMix {
+	
+	opacity: 0;
+	transition: opacity 2.5s ease-in-out;
+	margin-left: calc(var(--index) * -31.5);
+
+}
+
+.colorMix img {
+	max-width: calc(var(--index) * 4.5);
+
+}
+
+.colorLeft {
+	margin-top: calc(var(--index) * 9.5);
+	margin-left: calc(var(--index) * 5.5);
+}
+
+
+.colorRight {
+	margin-top: calc(var(--index) * 2.5);
+	margin-left: calc(var(--index) * 8.5);
+}
+
+.colorMix img:hover {
+	scale: 1.121;
+}
