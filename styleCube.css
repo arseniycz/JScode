@@ -1,0 +1,32 @@
+.contaner {
+    display: inline;
+    
+    
+    
+}
+
+
+.basecube {
+    background-color: rgb(255, 180, 95);
+    height: 500px;
+    width: 360px;
+    display: inline-block;
+    margin-top: 150px;
+}
+
+img {
+    
+    height: 100vh;
+    position: absolute;
+}
+
+.side {
+    background-color: rgb(26, 226, 0);
+    height: 500px;
+    width: 350px;
+    display: inline-block;
+    
+}
+
+
+
