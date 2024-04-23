@@ -1,0 +1,135 @@
+body {
+    background-color: rgb(102, 98, 98);
+    margin-top: 10%;
+    margin-left: 10%;
+    color: rgb(104, 195, 195);
+}
+header {
+  color: #a4a4a4;
+}
+
+.logo, .logo2, .logo3, .logo4, .logo5, .logo6 {
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+}
+.logo, .logo4 {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+.logo2, .logo5 {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  border-radius: 10px;
+}
+.logo3, .logo6 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+}
+.logo4 {
+  background-color: #2ecc71;
+}
+.logo5 {
+  background-color: #f1c40f;
+}
+.logo6 {
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+}
+
+#logo11 {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border-radius: 50%;
+  line-height: 100px;
+}
+
+#logo21 {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  background-color: #9b59b6;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+#logo31 {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(60deg, #f1c40f, #f39c12);
+  line-height: 100px;
+}
+
+#logo41 {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  background-color: #2ecc71;
+  border-radius: 20%;
+  line-height: 100px;
+}
+
+#logo51 {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  border-radius: 5px;
+  line-height: 100px;
+}
+
+#logo61 {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(60deg, #3498db, #2ecc71);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  line-height: 100px;
+}
