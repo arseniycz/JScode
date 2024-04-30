@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přihláška</title>
+        <style>
+            .vysledek-prijat {
+                color: green;
+            }
+            .vysledek-odmitnut {
+                color: orange;
+            }
+        </style>
+
+</head>
+<body>
+
+        <h1 id="vysledek">Výsledek</h1>
+    
+        <label for="jazyk">Programovací jazyk:</label>
+        <input type="text" id="jazyk" name="jazyk"><br><br>
+    
+        <label for="mesto">Město (Praha):</label>
+        <input type="text" id="mesto" name="mesto"><br><br>
+    
+        <button id="prihlasit">Přihlásit se</button>
+    
+        <script>
+            document.getElementById('prihlasit').addEventListener('click', function() {
+                var jazyk = document.getElementById('jazyk').value;
+                var mesto = document.getElementById('mesto').value;
+                var vysledekElement = document.getElementById('vysledek');
+    
+                if ((jazyk === 'Python' || jazyk === 'JavaScript') && mesto === 'Praha') {
+                    vysledekElement.textContent = 'Jste přijat';
+                    vysledekElement.className = 'vysledek-prijat';
+                } else {
+                    vysledekElement.textContent = 'Bohužel';
+                    vysledekElement.className = 'vysledek-odmitnut';
+                }
+            });
+        </script>
+</body>
+</html>
