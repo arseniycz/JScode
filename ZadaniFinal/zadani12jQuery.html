@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        img {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <img src="" alt="" width="300" height="300">
+    
+        <!-- select se chová jako jeden prvek, který bude mít value podle toho, které option je vybrané -->
+        <!-- z vybraného option se nastaví jeho value do value selectu  -->
+        <!-- "Obrázek č. ..." je jen textová informace pro uživatele (to co vidí) -->
+    
+        <select>
+            <option value="">žádný obrázek</option>
+            <option value="https://picsum.photos/id/235/300/300">Obrázek č. 235</option>
+            <option value="https://picsum.photos/id/236/300/300">Obrázek č. 236</option>
+            <option value="https://picsum.photos/id/237/300/300">Obrázek č. 237</option>
+            <option value="https://picsum.photos/id/238/300/300">Obrázek č. 238</option>
+        </select>
+    
+        <hr>
+        <hr>
+    
+        <h2>jQuery Wiki text</h2>
+        <p>jQuery je javascriptová knihovna s širokou podporou prohlížečů, která klade důraz na interakci mezi JavaScriptem a HTML.</p>
+        <p>Byla vydána Johnem Resigem v lednu 2006 na newyorském BarCampu.</p>
+        <p>jQuery je svobodný a otevřený software pod licencí MIT.</p>
+    
+        <input type="color" id="color1">
+        <input type="color" id="color2">
+    
+    
+        <!-- input color má value (resp .val() v rámci jQuery) jako hexadecimální kód -->
+        <!--
+            např #FF0000 je červená protože
+            (R) FF = 255
+            (G) 00 = 0
+            (B) 00 = 0
+        -->
+        <!-- v RGB systému barev je to tedy max. hodnota červené, žádná modrá a žádní zelená -->
+        <!-- to jen pro informací, stačí hodnotu jen vzít a nastavit jí do css color -->
+
+  
+    <script>
+        $(document).ready(function() {
+           
+            $('select').change(function() {
+                let selectedValue = $(this).val(); 
+                $('img').attr('src', selectedValue); 
+            });
+        
+          
+            $('#color1').change(function() {
+                let color = $(this).val(); 
+                $('h2').css('color', color); 
+            });
+        
+           
+            $('#color2').change(function() {
+                let color = $(this).val();
+                $('p').css('color', color); 
+            });
+        });
+        </script>
+        </body>
+        </html>
+        
+</body>
+</html>
