@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyklus For</title>
+</head>
+<body>
+    <h1>Cyklus For</h1>
+    <p>Čísla od 1 do zadaného čísla:</p>
+    <div id="numb"></div>
+
+    <script>
+        let cislo = parseInt(prompt('Zadej číslo: '));
+        let numbersContainer = document.getElementById('num');
+
+        for (let i = 1; i <= cislo; i++) {
+            numbersContainer.innerHTML += i + '<br>';
+        }
+    </script>
+</body>
+</html>

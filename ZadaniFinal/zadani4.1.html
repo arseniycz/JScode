@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyklus While</title>
+</head>
+<body>
+    <h1>Cyklus While</h1>
+    <p>Čísla od 1 do zadaného čísla:</p>
+    <div id="num"></div>
+
+    <script>
+        let cislo = parseInt(prompt('Zadej číslo: '));
+        let numbersContainer = document.getElementById('num');
+        let i = 1;
+
+        while (i <= cislo) {
+            numbersContainer.innerHTML += i + '<br>';
+            i++;
+        }
+    </script>
+</body>
+</html>
