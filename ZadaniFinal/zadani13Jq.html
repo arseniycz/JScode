@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        let dataUrl = "https://jsonplaceholder.typicode.com/users";
+
+        fetch(dataUrl)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                for (let item of data) {
+                    
+                    let userDiv = $('<div>').append(
+                        $('<h2>').text(item.name),
+                        $('<p>').text(item.email),
+                        $('<p>').text(item.company.name)
+                    );
+                    $('body').append(userDiv);
+                }
+            });
+    });
+</script>
+
+</body>
+</html>
