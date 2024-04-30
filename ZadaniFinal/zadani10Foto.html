@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto</title>
+    <style>
+img {
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 120px;
+}
+button {
+    max-width: 300px;
+    height: 100px;
+    width: 90px;
+    background-color: aquamarine;
+}
+    </style>
+</head>
+<body>
+    
+    <button onclick="galerie.prev();"> Prev </button >
+    <button onclick="galerie.next();" >Next </button>
+
+
+
+<script>
+    class Galerie {
+    constructor(obrazky) {
+        this.index = 0; 
+        this.obrazky = obrazky; 
+        this.img = document.createElement('img'); 
+        document.body.appendChild(this.img); 
+        this.updateImg(); 
+    }
+
+    next() {
+        if (this.index < this.obrazky.length - 1) {
+            this.index++; 
+        } else {
+            this.index = 0; 
+        }
+        this.updateImg(); 
+    }
+
+    prev() {
+        if (this.index > 0) {
+            this.index--; 
+        } else {
+            this.index = this.obrazky.length - 1;
+        }
+        this.updateImg(); 
+    }
+
+    updateImg() {
+        this.img.src = this.obrazky[this.index]; 
+    }
+}
+
+let obrazky = [
+    'https://picsum.photos/id/10/600/300',
+    'https://picsum.photos/id/20/600/300',
+    'https://picsum.photos/id/60/600/300',
+    'https://picsum.photos/id/70/600/300',
+    'https://picsum.photos/id/40/600/300',
+    'https://picsum.photos/id/80/600/300',
+    'https://picsum.photos/id/90/600/300'
+];
+let galerie = new Galerie(obrazky);
+
+
+
+
+</script>
+</body>
+</html>
